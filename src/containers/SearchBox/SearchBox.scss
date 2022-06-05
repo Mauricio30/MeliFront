@@ -1,0 +1,12 @@
+@import "../../assets/styles/variables.scss";
+
+.search-box {
+    background-color: $header-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $height-header;
+    &__logo {
+        margin-right: 10px;
+    }
+}
