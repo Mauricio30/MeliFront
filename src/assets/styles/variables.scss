@@ -1,9 +1,24 @@
 /*--Colores--*/
 $primary: #fff159;
 $background: #ededed;
+$gray-primary: #668;
+$white-primary: #ffffff;
 
+$background-card: $white-primary;
 $background-color: $background;
+$path-color: $gray-primary;
 $header-color: $primary;
 
 /*--Heights--*/
 $height-header: 50px;
+$height-box: 35px;
+
+/*--widths--*/
+$large-width: 1200px;
+
+$margin-fixed: 15px 0;
+
+/*--Padding--*/
+$padding-fixed: 0 15px;
+$padding-initial: 0 300px;
+$padding-around-small: 10px;

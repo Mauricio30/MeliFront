@@ -1,7 +1,8 @@
 import { apiData } from "../constants";
 
-export const useFetch = () => {
-    const callService = (type, query) => {
+export const ApiService = (dispatch, steps, options) => {
+        dispatch(steps.request());
+        const { type, query } = options;
         console.log(type, query);
         const { endpoint, method } = apiData[type];
         fetch(endpoint(query), {
@@ -11,7 +12,8 @@ export const useFetch = () => {
                 Connection: 'keep-alive',
             }
         }).then(response => response.json())
-        .then(data => console.log(data));
-    }
-    return { callService };
+        .then(data => dispatch(steps.recieve(data)))
+        .catch(err => {
+            dispatch(steps.recieve(err));
+        });
 }

@@ -1,18 +1,24 @@
+@import '../../assets/styles/variables.scss';
+
 .input-custom {
     position: relative;
     display: flex;
+    padding: 0 0 0 15px;
+    width: $large-width;
     &__input {
         border: none;
-        width: 850px;
-        height: 35px;
-        padding: 0 15px;
+        padding: $padding-fixed;
         outline: 0;
+        &--size {
+            width: calc(100% - 0px);
+            height: $height-box;
+        }
     }
     &__button {
         width: 50px;
-        height: 35px;
+        height: $height-box;
         border: none;
         cursor: pointer;
-        padding: 0 15px;
+        padding: $padding-fixed;
     }
 }

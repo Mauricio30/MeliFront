@@ -1,0 +1,16 @@
+@import '../../assets/styles/variables.scss';
+
+.ProductList {
+    padding: $padding-initial;
+    margin: $margin-fixed;
+    &__card {
+        background-color: $background-card;
+        padding: $padding-around-small;
+     &-item {
+         display: flex;
+         flex-direction: row;
+         cursor: pointer;
+         padding: $padding-around-small;
+     }   
+    }
+}

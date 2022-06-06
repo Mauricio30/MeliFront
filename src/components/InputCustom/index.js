@@ -4,7 +4,7 @@ import "./InputCustom.scss";
 const InputCustom = ({ placeholder, value, onChange, type, icon, onClick }) => (
   <label id="input-custom" className="input-custom">
     <input
-      className="input-custom__input"
+      className="input-custom__input input-custom__input--size"
       type={type}
       placeholder={placeholder}
       value={value}

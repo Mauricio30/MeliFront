@@ -3,9 +3,11 @@
 .search-box {
     background-color: $header-color;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     height: $height-header;
+    padding: $padding-initial;
+    margin: $margin-fixed
     &__logo {
         margin-right: 10px;
     }

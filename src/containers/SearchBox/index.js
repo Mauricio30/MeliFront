@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { StoreContext } from "../../context/storeContext";
 import Icon from "../../assets/icons/meli-icon.svg";
 import InputCustom from "../../components/InputCustom";
-import { useFetch } from "../../Hooks/useFetch"
 import "./SearchBox.scss";
 
 const SearchBox = () => {
   const [textToSearch, setTextToSearch] = useState("");
-  const { callService } = useFetch();
+  const { getProductsAction } = useContext(StoreContext);
   const changeTextSearch = (e) => {
     const {
       target: { value },
@@ -15,7 +15,11 @@ const SearchBox = () => {
   };
 
   const getProduts = () => {
-    callService('getProducts', textToSearch);
+    const options = {
+        type: 'getProducts',
+        query: textToSearch
+    }
+    getProductsAction(options);
   }
 
   const inputProps = {
