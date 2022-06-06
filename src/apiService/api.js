@@ -1,9 +1,8 @@
 import { apiData } from "../constants";
 
-export const ApiService = (dispatch, steps, options) => {
+export const ApiService = (dispatch, options) => {
+        const { type, query, steps } = options;
         dispatch(steps.request());
-        const { type, query } = options;
-        console.log(type, query);
         const { endpoint, method } = apiData[type];
         fetch(endpoint(query), {
             method,
