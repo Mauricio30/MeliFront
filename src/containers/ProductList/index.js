@@ -15,11 +15,9 @@ const ProductList = () => {
   const { products, productDetail } = store;
   const navigate = useNavigate();
   useEffect(() => {
-    console.log(productDetail);
     if (productDetail.item) navigate(`/items/${productId}`, { replace: true });
   }, [productDetail]);
   const changeNumberProducts = () => {
-    console.log("change", numberProducts);
     const newMaxProducts = numberProducts + 4;
     if (newMaxProducts > products.items.length)
       setNumberProducts(products.items.length);

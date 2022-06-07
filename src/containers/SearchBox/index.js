@@ -1,18 +1,26 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useContext, useState, useEffect } from "react";
-import { useNavigate } from "react-router";
 import { StoreContext } from "../../context/storeContext";
 import InputCustom from "../../components/InputCustom";
 import { getProductsSteps } from "../../context/storeActions";
 import "./SearchBox.scss";
 import Icon from "../../components/Icon";
+import withRouter from "../../HOCs/withRouter";
 
-const SearchBox = () => {
+const SearchBox = ({ router }) => {
   const { store, resetData } = useContext(StoreContext);
   const { products } = store;
   const [textToSearch, setTextToSearch] = useState("");
   const { getDataAction } = useContext(StoreContext);
-  const navigate = useNavigate();
+
+  useEffect(() => {
+    const { search } = router.location;
+    if (search !== '') {
+        const query = search.split("=")[1];
+        setTextToSearch(query);
+        getProducts(query);
+    }
+  }, [])
 
   const changeTextSearch = (e) => {
     const {
@@ -21,20 +29,19 @@ const SearchBox = () => {
     setTextToSearch(value);
   };
 
-  const getProducts = () => {
+  const getProducts = (value = null) => {
     resetData();
     const options = {
       type: "getProducts",
-      query: textToSearch,
+      query: value ?? textToSearch,
       steps: getProductsSteps,
     };
     getDataAction(options);
   };
 
   useEffect(() => {
-    console.log(products);
     if (products.items)
-      navigate(`/items?search=${textToSearch}`, { replace: true });
+      router.navigate(`/items?search=${textToSearch}`, { replace: true });
   }, [products]);
 
   const inputProps = {
@@ -55,10 +62,10 @@ const SearchBox = () => {
       <InputCustom
         {...inputProps}
         onChange={changeTextSearch}
-        onClick={getProducts}
+        onClick={() => getProducts()}
       />
     </section>
   );
 };
 
-export default SearchBox;
+export default withRouter(SearchBox);
