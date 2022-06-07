@@ -8,7 +8,7 @@ const App = () => {
     <section id="App" className="App">
       <StoreProvider>
         <SearchBox />
-      <Router />
+        <Router />
       </StoreProvider>
     </section>
   );

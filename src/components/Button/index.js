@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'; 
 import './Button.scss';
 
 const Button = ({ name, action }) => {
@@ -6,6 +7,15 @@ const Button = ({ name, action }) => {
             {name}
         </button>
     )
+}
+
+Button.defaultProps = {
+    action: undefined
+}
+
+Button.propTypes = {
+    name: PropTypes.string.isRequired,
+    action: PropTypes.func
 }
 
 export default Button;

@@ -41,19 +41,24 @@ const ProductDetail = () => {
                 loading="eager"
               />
               <div className="ProductDetail__description">
-                <h3 className="ProductDetail__description-title">Descripción del producto</h3>
-                <span className="ProductDetail__description-text">{item.description}</span>
+                <h3 className="ProductDetail__description-title">
+                  Descripción del producto
+                </h3>
+                <span className="ProductDetail__description-text">
+                  {item.description}
+                </span>
               </div>
             </div>
             <div className="ProductDetail__actions">
-              <span>{`${conditionProduct[item.condition]} Vendidos ${
+              <span className="ProductDetail__condition-text">{`${conditionProduct[item.condition]} | ${
                 item.sold_quantity
-              }`}</span>
-              <span>{item.title}</span>
-              <h4>
-                {formatCurrency(item.price.amount, item.price.currency)} <span>{item.price.decimals}</span>
-              </h4>
-              <Button name='Comprar' />
+              } vendidos`}</span>
+              <span className="ProductDetail__title">{item.title}</span>
+              <span className="ProductDetail__price">
+                {formatCurrency(item.price.amount, item.price.currency)}{" "}
+                <span className="ProductDetail__price-decimals">{item.price.decimals}</span>
+              </span>
+              <Button name="Comprar" />
             </div>
           </div>
         </>

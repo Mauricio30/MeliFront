@@ -14,24 +14,42 @@
         text-align: center;
         width: 70%;
     }
-    &__picture {
-        
+    &__title {
+        font-size: 16px;
+        font-weight: bold;
+        padding: $padding-around-s 0;
+    }
+    &__condition-text {
+        font-size: $small;
+        color: $path-color;
+        padding: $padding-around-xs 0;
     }
     &__actions {
         width: 30%;
         display: flex;
         flex-direction: column;
-        padding: 20px;
+        padding: $padding-around-l;
     }
     &__description {
-        padding: 20px 10px;
+        padding: $padding-around-l $padding-around-s;
         text-align: justify;
     }
     &__description-title {
-        padding: 10px 0px;
-        font-size: 25px;
+        padding: $padding-around-m 0px;
+        font-size: $large;
+        font-weight: 300;
     }
     &__description-text {
-        white-space: pre-line
+        white-space: pre-line;
+        color: $gray-primary;
+    }
+    &__price {
+        font-size: $extra-large;
+        padding: 10px 0 30px 0;
+        display: inline-flex;
+    }
+    &__price-decimals {
+        font-size: 15px;
+        padding: 2px 2px 0px 2px;
     }
 }

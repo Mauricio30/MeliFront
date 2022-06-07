@@ -3,20 +3,26 @@ $primary: #fff159;
 $background: #ededed;
 $gray-primary: #668;
 $white-primary: #ffffff;
+$white-secondary: #eee;
 $blue-primary: #3483fa;
+$green-primary: #00a650;
+$black-primary: #333;
 
 $background-card: $white-primary;
 $background-color: $background;
 $path-color: $gray-primary;
 $header-color: $primary;
 $button-primary-color: $blue-primary;
+$currency-color: $black-primary;
 
 /*--Heights--*/
+$height-small: 15px;
 $height-header: 50px;
 $height-box: 35px;
 $height-button: 40px;
 
 /*--widths--*/
+$width-small: 15px;
 $large-width: 1200px;
 $medium-width-button: 250px;
 $small-width-button: 50px;
@@ -29,9 +35,14 @@ $padding-initial: 0 300px;
 $padding-card: 0 300px 50px 300px;
 $padding-around-xs: 5px;
 $padding-around-s: 10px;
+$padding-around-m: 15px;
+$padding-around-l: 20px;
 
 /*--Fonts--*/
 $font-family: sans-serif;
 
 /*--Fonts Size--*/
+$small: 14px;
 $medium: 18px;
+$large: 24px;
+$extra-large: 30px

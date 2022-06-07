@@ -2,10 +2,10 @@
 import { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import { StoreContext } from "../../context/storeContext";
-import Icon from "../../assets/icons/meli-icon.svg";
 import InputCustom from "../../components/InputCustom";
 import { getProductsSteps } from "../../context/storeActions";
 import "./SearchBox.scss";
+import Icon from "../../components/Icon";
 
 const SearchBox = () => {
   const { store, resetData } = useContext(StoreContext);
@@ -29,7 +29,6 @@ const SearchBox = () => {
       steps: getProductsSteps,
     };
     getDataAction(options);
-
   };
 
   useEffect(() => {
@@ -46,10 +45,10 @@ const SearchBox = () => {
   };
   return (
     <section id="search-box" className="search-box">
-      <img
+      <Icon
         className="search-box__logo"
-        src={Icon}
-        alt="MeliIcon"
+        type="logo"
+        id="LogoMeli"
         width={35}
         height={35}
       />

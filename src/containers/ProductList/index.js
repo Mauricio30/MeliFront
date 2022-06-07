@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 import Breadcrumb from "../../components/Breadcrumb";
 import { StoreContext } from "../../context/storeContext";
 import { getProductDetailSteps } from "../../context/storeActions";
-import "./ProductList.scss";
 import { formatCurrency } from "../../utils";
 import { conditionProduct } from "../../utils/constants";
+import "./ProductList.scss";
 
 const ProductList = () => {
   const [productId, setProductId] = useState();

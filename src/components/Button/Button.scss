@@ -6,7 +6,7 @@
     border-radius: 8px 8px 8px 8px;
     &--size-medium {
         font-size: $medium;
-        width: $medium-width-button;
+        width: auto;
         height: $height-button;
     }
     &--color {
