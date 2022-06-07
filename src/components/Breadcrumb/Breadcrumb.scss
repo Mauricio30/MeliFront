@@ -4,5 +4,7 @@
     margin: $margin-fixed;
     &__path {
         color: $path-color;
+        font-family: $font-family;
+        font-size: 14px;
     }
 }

@@ -10,3 +10,14 @@ export const apiData = {
         method: 'GET'
     }
 }
+
+export const countryCurrencyDictionary = {
+    USD: 'en-US',
+    ARS: 'es-AR'
+}
+
+export const conditionProduct = {
+    new: 'Nuevo',
+    used: 'Usado',
+    not_specified: 'No especificado'
+}

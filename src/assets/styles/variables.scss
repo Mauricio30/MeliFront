@@ -3,22 +3,35 @@ $primary: #fff159;
 $background: #ededed;
 $gray-primary: #668;
 $white-primary: #ffffff;
+$blue-primary: #3483fa;
 
 $background-card: $white-primary;
 $background-color: $background;
 $path-color: $gray-primary;
 $header-color: $primary;
+$button-primary-color: $blue-primary;
 
 /*--Heights--*/
 $height-header: 50px;
 $height-box: 35px;
+$height-button: 40px;
 
 /*--widths--*/
 $large-width: 1200px;
+$medium-width-button: 250px;
+$small-width-button: 50px;
 
 $margin-fixed: 15px 0;
 
 /*--Padding--*/
 $padding-fixed: 0 15px;
 $padding-initial: 0 300px;
-$padding-around-small: 10px;
+$padding-card: 0 300px 50px 300px;
+$padding-around-xs: 5px;
+$padding-around-s: 10px;
+
+/*--Fonts--*/
+$font-family: sans-serif;
+
+/*--Fonts Size--*/
+$medium: 18px;

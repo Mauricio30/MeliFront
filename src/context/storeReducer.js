@@ -4,7 +4,8 @@ import {
     GET_PRODUCTS_FAILED,
     GET_PRODUCT_DETAIL_LOADING,
     GET_PRODUCT_DETAIL_SUCCESS,
-    GET_PRODUCT_DETAIL_FAILED
+    GET_PRODUCT_DETAIL_FAILED,
+    RESET_DATA
 } from "./types";
 
 const initialStateProduts = {
@@ -65,6 +66,10 @@ export const storeReducer = (
           productDetailIsLoading: false,
           productDetailIsError: true
         };
+      case RESET_DATA:
+        return {
+          ...initialState
+        }
     default:
       return state;
   }

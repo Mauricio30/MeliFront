@@ -1,4 +1,4 @@
-import { apiData } from "../constants";
+import { apiData } from "../utils/constants";
 
 export const ApiService = (dispatch, options) => {
         const { type, query, steps } = options;

@@ -4,11 +4,11 @@ import { useNavigate } from "react-router";
 import { StoreContext } from "../../context/storeContext";
 import Icon from "../../assets/icons/meli-icon.svg";
 import InputCustom from "../../components/InputCustom";
-import { getProductsSteps } from '../../context/storeActions';
+import { getProductsSteps } from "../../context/storeActions";
 import "./SearchBox.scss";
 
 const SearchBox = () => {
-  const { store } = useContext(StoreContext);
+  const { store, resetData } = useContext(StoreContext);
   const { products } = store;
   const [textToSearch, setTextToSearch] = useState("");
   const { getDataAction } = useContext(StoreContext);
@@ -22,18 +22,21 @@ const SearchBox = () => {
   };
 
   const getProducts = () => {
+    resetData();
     const options = {
       type: "getProducts",
       query: textToSearch,
-      steps: getProductsSteps
+      steps: getProductsSteps,
     };
     getDataAction(options);
+
   };
 
   useEffect(() => {
-      console.log(products);
-    if (products.items) navigate(`/items?search=${textToSearch}`, { replace: true });
-  }, [products])
+    console.log(products);
+    if (products.items)
+      navigate(`/items?search=${textToSearch}`, { replace: true });
+  }, [products]);
 
   const inputProps = {
     placeholder: "Nunca dejes de buscar",

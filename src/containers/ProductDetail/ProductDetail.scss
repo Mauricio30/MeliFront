@@ -1,0 +1,37 @@
+@import '../../assets/styles/variables.scss';
+
+.ProductDetail {
+    padding: $padding-card;
+    margin: $margin-fixed;
+    font-family: $font-family;
+    &__card {
+        background-color: $background-card;
+        border-radius: 4px 4px 0 0;
+        padding: $padding-around-xs;
+        display: flex;
+    }
+    &__content {
+        text-align: center;
+        width: 70%;
+    }
+    &__picture {
+        
+    }
+    &__actions {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    &__description {
+        padding: 20px 10px;
+        text-align: justify;
+    }
+    &__description-title {
+        padding: 10px 0px;
+        font-size: 25px;
+    }
+    &__description-text {
+        white-space: pre-line
+    }
+}
