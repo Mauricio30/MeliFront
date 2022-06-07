@@ -8,7 +8,7 @@ En del directorio del proyecto, puedes ejecutar:
 
 Corre la aplicación en modo desarrollador
 Abre [http://localhost:3000](http://localhost:3000) para ver la aplicación en el navegador.
-## Paths habilitados
+## Endpoints habilitados
 
 http://localhost:3000/ => ruta de entrada.
 
