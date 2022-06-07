@@ -37,15 +37,15 @@ const ProductList = () => {
     setProductId(itemId);
   };
   return (
-    <section id="ProductList" className="ProductList">
+    <section id="ProductList" className="product-list">
       {products.categories && (
         <>
           <Breadcrumb paths={products.categories} />
-          <div className="ProductList__card">
+          <div className="product-list__card">
             {products.items.slice(0, numberProducts).map((item) => (
               <div
                 key={item.id}
-                className="ProductList__card-item"
+                className="product-list__card-item"
                 onClick={() => getProductDetail(item.id)}
               >
                 <img
@@ -55,22 +55,22 @@ const ProductList = () => {
                   height={160}
                   loading="eager"
                 />
-                <div className="ProductList__detail-content">
-                  <h4 className="ProductList__currency">
+                <div className="product-list__detail-content">
+                  <h4 className="product-list__currency">
                     {formatCurrency(item.price.amount, item.price.currency)}{" "}
                     {item.free_shipping && (
-                      <span className="ProductList__circle" />
+                      <span className="product-list__circle" />
                     )}
                   </h4>
-                  <span className="ProductList__title">{item.title}</span>
+                  <span className="product-list__title">{item.title}</span>
                 </div>
-                <span className="ProductList__detail-product">
+                <span className="product-list__detail-product">
                   {conditionProduct[item.condition]}
                 </span>
               </div>
             ))}
           </div>
-          <button className="ProductList__link" onClick={changeNumberProducts}>
+          <button className="product-list__link" onClick={changeNumberProducts}>
             Ver más
           </button>
         </>

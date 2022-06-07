@@ -1,6 +1,6 @@
 @import "../../assets/styles/variables.scss";
 
-.ProductList {
+.product-list {
   padding: $padding-card;
   margin: $margin-fixed;
   font-family: $font-family;
@@ -54,4 +54,10 @@
     color: $blue-primary;
     cursor: pointer;
   }
+}
+
+@media (max-width: 1000px) {
+    .product-list {
+      padding: 10px;
+    }
 }

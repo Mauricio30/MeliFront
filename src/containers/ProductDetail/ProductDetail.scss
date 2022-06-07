@@ -1,6 +1,6 @@
 @import '../../assets/styles/variables.scss';
 
-.ProductDetail {
+.product-detail {
     padding: $padding-card;
     margin: $margin-fixed;
     font-family: $font-family;
@@ -51,5 +51,11 @@
     &__price-decimals {
         font-size: 15px;
         padding: 2px 2px 0px 2px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .product-detail {
+      padding: 10px;
     }
 }
